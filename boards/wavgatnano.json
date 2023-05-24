@@ -1,0 +1,30 @@
+{
+  "build": {
+    "core": "lgt8f",
+    "extra_flags": "-DARDUINO_AVR_NANO",
+    "f_cpu": "16000000L",
+    "mcu": "atmega328p",
+    "variant": "lgt8fx8p"
+  },
+  "bootloader": {
+    "efuse": "0xFD",
+    "file": "lgt8fx8p/optiboot_lgt8f328p.hex",
+    "hfuse": "0xFF",
+    "lock_bits": "0x3F",
+    "lfuse": "0xFF",
+    "unlock_bits": "0x3F"
+  },
+  "frameworks": [
+    "arduino"
+  ],
+  "name": "WAVGAT Nano AVGA328P",
+  "upload": {
+    "maximum_ram_size": 2048,
+    "maximum_size": 29696,
+    "protocol": "arduino",
+    "require_upload_port": true,
+    "speed": 115200
+  },
+  "url": "https://www.arduino.cc/en/Main/ArduinoBoardNano",
+  "vendor": "Arduino"
+}
