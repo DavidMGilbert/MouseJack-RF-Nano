@@ -28,7 +28,7 @@ Building the device is straight-forward, and the code provides a tool to use Duc
 <h2 align=center> 🛒 Shopping List</h2>
 <center><img height=200 width=auto src="https://raw.githubusercontent.com/davidmgilbert/MouseJack-RF-Nano/master/img/rf-nano.jpeg"></center>
 <h2 align=center>
-  <a href="https://www.davidmgilbert.com/shop/">
+  <a href="https://www.davidmgilbert.com/product/mousejack-rf-nano/">
     <img src="https://forthebadge.com/images/badges/check-it-out.svg">
   </a>
 
