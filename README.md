@@ -55,6 +55,18 @@ MouseJack-RF-Nano $ cd tools
 
  If you monitor the serial port using the PlatformIO IDE, you will see the radio information details and a lot of debugging information being printed while scanning and during attack.
 
+ *** UPDATE 16/04/2025 ***
+ Added support for the use of a generic 5mm Tri-colour LED. 
+
+ Ground pin of LED to GND with 470 ohm Resistor
+ Red pin of LED to D2
+ Blue pin of LED to D3
+ Green Pin of LED to D4
+
+ Green Status - Idle / attack complete.
+ Blue Status - Scanning for vunelrable device.
+ Red Status - Attack in progress.
+
   ⚠ ***Warning: No interaction is required to initiate an attack.*** ⚠ 
 
 <h2 align=center> 📝 How to Contribute? </h2>  
