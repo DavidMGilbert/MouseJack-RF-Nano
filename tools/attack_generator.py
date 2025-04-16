@@ -152,7 +152,7 @@ class DuckyParser(object):
                 pass
 
             else:
-                print "CAN'T PROCESS... %s" % line
+                print("CAN'T PROCESS... %s" % line)
 
         return entries
 
