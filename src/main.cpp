@@ -20,6 +20,9 @@ RF24 radio(CE, CSN);
 
 long time;
 int ledpin = 13;
+int led_red = 2;
+int led_blue = 3;
+int led_green = 4;
 uint64_t promisc_addr = 0xAALL;
 uint8_t channel = 25;
 uint64_t address;
@@ -116,6 +119,9 @@ void scan() {
 
   while (1) {
     channel++;
+    digitalWrite(led_green, LOW);
+    digitalWrite(led_blue, HIGH);
+    digitalWrite(led_red, LOW);
     if (channel > 84) {
       Serial.println("starting channel sweep");
       digitalWrite(ledpin, HIGH);
@@ -349,7 +355,9 @@ void log_transmit(uint8_t meta, uint8_t keys2send[], uint8_t keysLen) {
 
 void launch_attack() {
   Serial.println("starting attack");
-
+  digitalWrite(led_green, LOW);
+  digitalWrite(led_blue, LOW);
+  digitalWrite(led_red, HIGH);
   if (payload_type) {
     Serial.println("payload type is injectable");
 
@@ -439,6 +447,9 @@ void launch_attack() {
     }
 
     digitalWrite(ledpin, LOW);
+    digitalWrite(led_green,HIGH);
+    digitalWrite(led_blue, LOW);
+    digitalWrite(led_red, LOW);
   }
   return;
 }
@@ -460,9 +471,15 @@ void setup() {
   printf_begin();
   pinMode(ledpin, OUTPUT);
   digitalWrite(ledpin, LOW);
+  digitalWrite(led_green, HIGH);
+  digitalWrite(led_blue, LOW);
+  digitalWrite(led_red, LOW);
 }
 
 void loop() {
+  pinMode(led_green, OUTPUT);
+  pinMode(led_red, OUTPUT);
+  pinMode(led_blue, OUTPUT);
   reset();
   scan();
   fingerprint();
